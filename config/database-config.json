@@ -1,9 +1,9 @@
 {
   "database": {
-    "host": "your-rds-endpoint",
+    "host": "my-db-poc.cl668ku8y843.us-east-2.rds.amazonaws.com",
     "port": 3306,
-    "user": "db-username",
-    "password": "db-password",
-    "name": "your-db-name"
+    "user": "admin",
+    "password": "HSxm]<3f#gq6aLf<fjb2(z$3XQ)*",
+    "name": "krishnadb"
   }
 }
