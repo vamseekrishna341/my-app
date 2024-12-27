@@ -4,10 +4,10 @@ const app = express();
 const port = 3000;
 
 const db = mysql.createConnection({
-  host: 'your-rds-endpoint',
-  user: 'your-db-user',
-  password: 'your-db-password',
-  database: 'your-db-name',
+  host: 'my-db-poc.cl668ku8y843.us-east-2.rds.amazonaws.com',
+  user: 'admin',
+  password: 'HSxm]<3f#gq6aLf<fjb2(z$3XQ)*',
+  database: 'krishnadb',
 });
 
 db.connect((err) => {
