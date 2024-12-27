@@ -1,8 +1,8 @@
 {
   "aws": {
-    "region": "us-east-1",
+    "region": "us-east-2",
     "s3_bucket": "my-deployment-bucket",
-    "ec2_instance_id": "i-1234567890abcdef0",
+    "ec2_instance_id": "i-07458924144b0f0b0",
     "code_pipeline": "MyCodePipeline",
     "code_build_project": "MyCodeBuildProject"
   }
