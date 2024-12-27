@@ -8,17 +8,20 @@ phases:
       - echo Installing dependencies...
       - cd frontend && npm install
       - cd ../backend && npm install
-
+  pre_build:
+    commands:
+      - echo Pre-build step...
   build:
     commands:
       - echo Building frontend...
-      - cd frontend && npm run build
+      - ls -la # Debugging step to list files in the current directory
+      - cd frontend && npm run build # Build frontend
       - echo Building backend...
-      - cd backend && npm run build
-
+      - cd backend && npm run build # Build backend
   post_build:
     commands:
-      - echo Build completed on `date`
-      - echo Deploying the build...
-      - ./scripts/deploy_backend.sh
-      - ./scripts/deploy_frontend.sh
+      - echo Build completed successfully!
+
+artifacts:
+  files:
+    - '**/*'
