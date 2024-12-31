@@ -6,18 +6,18 @@ phases:
       nodejs: 18
     commands:
       - echo Installing dependencies...
-      - cd frontend && npm install
-      - cd ../backend && npm install
+      - if [ -d "frontend" ]; then cd frontend && npm install; else echo "Frontend not found"; fi
+      - if [ -d "backend" ]; then cd backend && npm install; else echo "Backend not found"; fi
   pre_build:
     commands:
       - echo Pre-build step...
+      - ls -la # Debugging files
   build:
     commands:
-      - echo Building frontend...
-      - ls -la # Debugging step to list files in the current directory
-      - cd frontend && npm run build # Build frontend
+      - echo Building frontend if it exists...
+      - if [ -d "frontend" ]; then cd frontend && npm run build; else echo "Frontend not found"; fi
       - echo Building backend...
-      - cd backend && npm run build # Build backend
+      - if [ -d "backend" ]; then cd backend && npm run build; else echo "Backend not found"; fi
   post_build:
     commands:
       - echo Build completed successfully!
